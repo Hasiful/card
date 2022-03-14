@@ -1,0 +1,148 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(dodgerblue 50%, #FFF 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    height: 380px;
+    width: 300px;
+    background-color: #000;
+    padding: 0px;
+    box-shadow: 0px 0px 15px rgb(0 0 0 / 20%);
+    position: relative;
+    transition: all linear 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.card:hover{
+    width: 600px;
+}
+
+.card_image{
+    position: relative;
+    min-width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    z-index: 2;
+}
+
+.card_image img{
+    max-width: 250px;
+    width: 100%;
+    transition: all linear 0.3s;
+}
+.card_image img:hover{
+    transform: rotate(-35deg);
+}
+
+.card_caption{
+    position: absolute;
+    left: 0px;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: dodgerblue;
+    transition: all linear 0.3s;
+    z-index: 1;
+    padding: 20px;
+}
+
+.card:hover .card_caption{
+    left: 300px;
+}
+
+.card_caption::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-left: 10px solid #FFF;
+}
+
+.caption_title{
+    font-size: 20px;
+    color: #FFF;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.caption_text{
+    color: #FFF;
+}
+
+.price{
+    font-size: 20px;
+    color: #cde7fd;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.button a{
+    color: #FFF;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 15px 25px;
+    background-color: #F8D210;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: all linear 0.3s;
+}
+.button a:hover{
+    background-color: #FFF;
+    color: dodgerblue;
+}
+
+.copon_code{
+    margin-top: 20px;
+}
+.copon_tile{
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #FFF;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.copon_code ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.copon_code ul li{
+    height: 30px;
+    width: 30px;
+}
+.copon_code ul li input{
+    outline: none;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #FFF;
+    color: #cde7fd;
+    text-align: center;
+}
